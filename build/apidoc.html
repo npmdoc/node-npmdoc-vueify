@@ -1,0 +1,608 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/vuejs/vueify"
+
+    >vueify (v9.4.1)</a>
+</h1>
+<h4>Vue component transform for Browserify</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.vueify">module vueify</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.vueify.vueify">
+            function <span class="apidocSignatureSpan"></span>vueify
+            <span class="apidocSignatureSpan">(file, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">vueify.</span>compiler</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">vueify.</span>insert_css</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">vueify.</span>normalize</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.vueify.compiler">module vueify.compiler</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.vueify.compiler.applyConfig">
+            function <span class="apidocSignatureSpan">vueify.compiler.</span>applyConfig
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.vueify.compiler.compile">
+            function <span class="apidocSignatureSpan">vueify.compiler.</span>compile
+            <span class="apidocSignatureSpan">(content, filePath, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.vueify.compiler.loadConfig">
+            function <span class="apidocSignatureSpan">vueify.compiler.</span>loadConfig
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">vueify.compiler.</span>_eventsCount</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">vueify.compiler.</span>_maxListeners</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">vueify.compiler.</span>_events</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">vueify.compiler.</span>domain</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">vueify.compiler.</span>options</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.vueify.insert_css">module vueify.insert_css</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.vueify.insert_css.insert">
+            function <span class="apidocSignatureSpan">vueify.insert_css.</span>insert
+            <span class="apidocSignatureSpan">(css)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">vueify.insert_css.</span>cache</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.vueify.normalize">module vueify.normalize</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.vueify.normalize.dep">
+            function <span class="apidocSignatureSpan">vueify.normalize.</span>dep
+            <span class="apidocSignatureSpan">(dep)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.vueify.normalize.lib">
+            function <span class="apidocSignatureSpan">vueify.normalize.</span>lib
+            <span class="apidocSignatureSpan">(file)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.vueify" id="apidoc.module.vueify">module vueify</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.vueify.vueify" id="apidoc.element.vueify.vueify">
+        function <span class="apidocSignatureSpan"></span>vueify
+        <span class="apidocSignatureSpan">(file, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function vueify(file, options) {
+  if (!/.vue$/.test(file)) {
+    return through()
+  }
+
+  compiler.loadConfig()
+  compiler.applyConfig(options)
+  compiler.applyConfig({
+    sourceMap: options._flags.debug
+  })
+
+  var data = &#x27;&#x27;
+  var stream = through(write, end)
+  stream.vueify = true
+
+  function dependency (file) {
+    stream.emit(&#x27;file&#x27;, file)
+  }
+
+  function emitStyle (e) {
+    stream.emit(&#x27;vueify-style&#x27;, e)
+  }
+
+  function write (buf) {
+    data += buf
+  }
+
+  function end () {
+    stream.emit(&#x27;file&#x27;, file)
+    compiler.on(&#x27;dependency&#x27;, dependency)
+    compiler.on(&#x27;style&#x27;, emitStyle)
+
+    compiler.compile(data, file, function (error, result) {
+      compiler.removeListener(&#x27;dependency&#x27;, dependency)
+      compiler.removeListener(&#x27;style&#x27;, emitStyle)
+      if (error) {
+        stream.emit(&#x27;error&#x27;, error)
+        // browserify doesn&#x27;t log the stack by default...
+        console.error(error.stack.replace(/^.*?\n/, &#x27;&#x27;))
+      }
+      stream.queue(result)
+      stream.queue(null)
+    })
+  }
+
+  return stream
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.vueify.compiler" id="apidoc.module.vueify.compiler">module vueify.compiler</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.vueify.compiler.applyConfig" id="apidoc.element.vueify.compiler.applyConfig">
+        function <span class="apidocSignatureSpan">vueify.compiler.</span>applyConfig
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">applyConfig = function (config) {
+  // copy user options to default options
+  Object.keys(config).forEach(function (key) {
+    if (key !== &#x27;customCompilers&#x27;) {
+      options[key] = config[key]
+    } else {
+      // register compilers
+      Object.keys(config[key]).forEach(function (name) {
+        compilers[name] = config[key][name]
+      })
+    }
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+``` js
+var fs = require(&#x22;fs&#x22;)
+var browserify = require(&#x27;browserify&#x27;)
+var vueify = require(&#x27;vueify&#x27;)
+
+// apply custom config
+vueify.compiler.<span class="apidocCodeKeywordSpan">applyConfig</span>({
+// ...same as in vue.config.js
+})
+
+browserify(&#x27;./main.js&#x27;)
+.transform(vueify)
+.bundle()
+.pipe(fs.createWriteStream(&#x22;bundle.js&#x22;))
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.vueify.compiler.compile" id="apidoc.element.vueify.compiler.compile">
+        function <span class="apidocSignatureSpan">vueify.compiler.</span>compile
+        <span class="apidocSignatureSpan">(content, filePath, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compile = function (content, filePath, cb) {
+  var isProduction = process.env.NODE_ENV === &#x27;production&#x27;
+  var isServer = process.env.VUE_ENV === &#x27;server&#x27;
+  var isTest = !!process.env.VUEIFY_TEST
+
+  // generate css scope id
+  var id = &#x27;data-v-&#x27; + genId(filePath)
+  // parse the component into parts
+  var parts = vueCompiler.parseComponent(content, { pad: true })
+
+  // check for scoped style nodes
+  var hasScopedStyle = parts.styles.some(function (style) {
+    return style.scoped
+  })
+
+  var resolvedParts = {
+    template: null,
+    script: null,
+    styles: []
+  }
+
+  Promise.all([
+    processTemplate(parts.template, filePath, resolvedParts),
+    processScript(parts.script, filePath, resolvedParts)
+  ].concat(parts.styles.map(function (style) {
+    return processStyle(style, filePath, id, resolvedParts)
+  })))
+  .then(mergeParts)
+  .catch(cb)
+
+  function mergeParts () {
+    // check whether script/template has changed
+    var prevParts = resolvedPartsCache[id] || {}
+    resolvedPartsCache[id] = resolvedParts
+    var scriptChanged = resolvedParts.script !== prevParts.script
+    var templateChanged = resolvedParts.template !== prevParts.template
+
+    var output = &#x27;&#x27;
+    var map = null
+    // styles
+    var style = resolvedParts.styles.join(&#x27;\n&#x27;)
+    if (style &#x26;&#x26; !isServer) {
+      // emit style
+      compiler.emit(&#x27;style&#x27;, {
+        file: filePath,
+        style: style
+      })
+      if (!options.extractCSS) {
+        style = JSON.stringify(style)
+        output +=
+          &#x27;var __vueify_style_dispose__ = require(&#x22;&#x27; + insertCSSPath + &#x27;&#x22;).insert(&#x27; + style + &#x27;)\n&#x27;
+      }
+    }
+    // script
+    var script = resolvedParts.script
+    if (script) {
+      if (options.sourceMap) {
+        map = generateSourceMap(script, output)
+      }
+      output +=
+        &#x27;;(function(){\n&#x27; + script + &#x27;\n})()\n&#x27; +
+        // babel 6 compat
+        &#x27;if (module.exports.__esModule) module.exports = module.exports.default\n&#x27;
+    }
+    // in case the user exports with Vue.extend
+    output += &#x27;var __vue__options__ = (typeof module.exports === &#x22;function&#x22;&#x27; +
+      &#x27;? module.exports.options&#x27; +
+      &#x27;: module.exports)\n&#x27;
+    // template
+    var template = resolvedParts.template
+    if (template) {
+      if (!isProduction &#x26;&#x26; !isServer) {
+        output +=
+          &#x27;if (__vue__options__.functional) {console.error(&#x22;&#x27; +
+            &#x27;[vueify] functional components are not supported and &#x27; +
+            &#x27;should be defined in plain js files using render functions.&#x27; +
+          &#x27;&#x22;)}\n&#x27;
+      }
+      var beforeLines
+      if (map) {
+        beforeLines = output.split(splitRE).length
+      }
+      output +=
+        &#x27;__vue__options__.render = &#x27; + template.render + &#x27;\n&#x27; +
+        &#x27;__vue__options__.staticRenderFns = &#x27; + template.staticRenderFns + &#x27;\n&#x27;
+      if (map) {
+        addTemplateMapping(content, parts, output, map, beforeLines)
+      }
+    }
+    // scoped CSS id
+    if (hasScopedStyle) {
+      output += &#x27;__vue__options__._scopeId = &#x22;&#x27; + id + &#x27;&#x22;\n&#x27;
+    }
+    // hot reload
+    if (!isProduction &#x26;&#x26; !isTest &#x26;&#x26; !isServer) {
+      output +=
+        &#x27;if (module.hot) {(function () {&#x27; +
+        &#x27;  var hotAPI = require(&#x22;&#x27; + hotReloadAPIPath + &#x27;&#x22;)\n&#x27; +
+        &#x27;  hotAPI.install(require(&#x22;vue&#x22;), true)\n&#x27; +
+        &#x27;  if (!hotAPI.compatible) return\n&#x27; +
+        &#x27;  module.hot.accept()\n&#x27; +
+        // remove style tag on dispose
+        (style &#x26;&#x26; !options.extractCSS
+          ? &#x27;  module.hot.dispose(__vueify_style_dispose__)\n&#x27;
+          : &#x27;&#x27;) +
+        &#x27;  if (!module.hot.data) {\n&#x27; +
+        // initial insert
+        &#x27;    hotAPI.createRecord(&#x22;&#x27; + id + &#x27;&#x22;, __vue__options__)\n&#x27; +
+        &#x27;  } else {\n&#x27; +
+        // update
+          (scriptChanged
+            ? &#x27;    hotAPI.reload(&#x22;&#x27; + id + &#x27;&#x22;, __vue__options__)\n&#x27;
+            : templateChanged
+              ? &#x27;    hotAPI.rerender(&#x22;&#x27; + id + &#x27;&#x22;, __vue__options__)\n&#x27;
+              : &#x27;&#x27;
+          ) +
+        &#x27;  }\n&#x27; +
+        &#x27;})()}&#x27;
+    }
+    if (map) {
+      output += &#x27;\n&#x27; + convert.fromJSON(map.toString()).toComment()
+    }
+    cb(null, output)
+  }
+
+  function generateSourceMap (script, output) {
+    // hot-reload source map busting ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+The compiler API (originally `vue-component-compiler`) is also exposed:
+
+``` js
+var compiler = require(&#x27;vueify&#x27;).compiler
+
+// filePath should be an absolute path
+compiler.<span class="apidocCodeKeywordSpan">compile</span>(fileContent, filePath, function (err, result) {
+  // result is a common js module string
+})
+```
+
+## Syntax Highlighting
+
+Currently there are syntax highlighting support for [Sublime Text](https://github.com/vuejs/vue-syntax-highlight), [Atom](https://
+atom.io/packages/language-vue), [Vim](https://github.com/posva/vim-vue), [Visual Studio Code](https://marketplace.visualstudio.com
+/items/liuji-jim.vue) and [Brackets](https://github.com/pandao/brackets-vue). Contributions for other editors/IDEs are highly appreciated
+! If you are not using any pre-processors in Vue components, you can also get by by treating `*.vue` files as HTML in your editor
+.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.vueify.compiler.loadConfig" id="apidoc.element.vueify.compiler.loadConfig">
+        function <span class="apidocSignatureSpan">vueify.compiler.</span>loadConfig
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">loadConfig = function () {
+  var fs = require(&#x27;fs&#x27;)
+  var path = require(&#x27;path&#x27;)
+  var configPath = path.resolve(process.cwd(), &#x27;vue.config.js&#x27;)
+  if (fs.existsSync(configPath)) {
+    compiler.applyConfig(require(configPath))
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var compiler = require(&#x27;./lib/compiler&#x27;)
+
+module.exports = function vueify (file, options) {
+if (!/.vue$/.test(file)) {
+  return through()
+}
+
+compiler.<span class="apidocCodeKeywordSpan">loadConfig</span>()
+compiler.applyConfig(options)
+compiler.applyConfig({
+  sourceMap: options._flags.debug
+})
+
+var data = &#x27;&#x27;
+var stream = through(write, end)
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.vueify.insert_css" id="apidoc.module.vueify.insert_css">module vueify.insert_css</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.vueify.insert_css.insert" id="apidoc.element.vueify.insert_css.insert">
+        function <span class="apidocSignatureSpan">vueify.insert_css.</span>insert
+        <span class="apidocSignatureSpan">(css)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">insert = function (css) {
+  if (inserted[css]) return noop
+  inserted[css] = true
+
+  var elem = document.createElement(&#x27;style&#x27;)
+  elem.setAttribute(&#x27;type&#x27;, &#x27;text/css&#x27;)
+
+  if (&#x27;textContent&#x27; in elem) {
+    elem.textContent = css
+  } else {
+    elem.styleSheet.cssText = css
+  }
+
+  document.getElementsByTagName(&#x27;head&#x27;)[0].appendChild(elem)
+  return function () {
+    document.getElementsByTagName(&#x27;head&#x27;)[0].removeChild(elem)
+    inserted[css] = false
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.vueify.normalize" id="apidoc.module.vueify.normalize">module vueify.normalize</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.vueify.normalize.dep" id="apidoc.element.vueify.normalize.dep">
+        function <span class="apidocSignatureSpan">vueify.normalize.</span>dep
+        <span class="apidocSignatureSpan">(dep)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dep = function (dep) {
+  if (IS_TEST) {
+    return dep
+  } else if (fs.existsSync(path.resolve(__dirname, &#x27;../node_modules&#x27;, dep))) {
+    // npm 2 or npm linked
+    return &#x27;vueify/node_modules/&#x27; + dep
+  } else {
+    // npm 3
+    return dep
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.vueify.normalize.lib" id="apidoc.element.vueify.normalize.lib">
+        function <span class="apidocSignatureSpan">vueify.normalize.</span>lib
+        <span class="apidocSignatureSpan">(file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lib = function (file) {
+  if (IS_TEST) {
+    return path.resolve(__dirname, file)
+  } else {
+    return &#x27;vueify/lib/&#x27; + file
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
